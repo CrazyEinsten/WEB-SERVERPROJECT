@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+    <title>
+        Happy Birthday!
+    </title>
+    <style type="text/css">
+    @font-face {
+        font-family: ShiGuang;
+        src: url('{% static "static/HYShiGuangTiW.ttf" %}');
+    }
+    @font-face {
+        font-family: XiaoMai;
+        src: url("{% static "static/HYXiaoMaiTiJ.ttf" %}");
+    }
+    </style>
+    <meta content="text/html" charset="UTF-8">
+    <script src="{% static "js/stars.js" %}"></script>
+    <script src="{% static "common/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "common/modernizr.custom.33020.js" %}"></script>
+    <script src="{% static "js/function.js" %}"></script>
+    <script src="{% static "js/firework.js" %}"></script>
+    <link rel="stylesheet" href="{% static "css/default.css" %}">
+    
+</head>
+
+<body>
+    <div id="example"></div>
+    <canvas id="fullstarbg"></canvas>
+    <div id="first">啦啦啦~~有话要说呀~~~</div>
+    <div id="wannasay">
+        <span class="context">祝我们的小公主18岁生日快乐</span><br/>
+        <span class="context">因为嫌弃自己的字太丑，我只能用这种特殊的方式给你我的贺卡</span><br/>
+        <span class="context">不过这样的话，虽然我的礼物迟到了（这里有诚挚的道歉）</span><br/>
+        <span class="context">但我的贺卡肯定能时准时到的</span><br/>
+        <span class="context">嘻嘻嘻，先为自己的机智鼓个掌</span><br/>
+        <span class="context">这六年来</span><br/>
+        <span class="context">我们渐渐成为了无话不谈的好朋友</span><br/>
+        <span class="context">都说女大十八变</span><br/>
+        <span class="context">但我希望我们的友谊永远不会变</span><br/>
+        <span class="context">在接下来的日子里</span><br/>
+        <span class="context">希望我们的友谊能继续持续下去</span><br/>
+        <span class="context">你的痛苦可以由我来承担</span><br/>
+        <span class="context">我的快乐能与你一起分享</span><br/>
+        <span class="context">我们永远是无话不谈的好朋友</span><br/>
+        <span class="context">最后言归正传</span><br/>
+        <span class="context">祝我们的小公主</span><br/>
+        <span class="context">在成年之后</span><br/>
+        <span class="context">越长越漂亮，越长越白，永远十八岁</span><br/>
+        <span class="context">开开心心的过完每一天</span><br/>
+        <span class="context">另外，平时注意饮食营养</span><br/>
+        <span class="context">多锻炼，多吃点儿东西，增强自己的体质，</span><br/>    
+        <span class="context">大学了学会照顾好自己，每次你生病我都会心疼的呢。</span><br/>
+        <span class="context" id="ps">//记得给我寄点好吃的回来，我饿了。</span><br/>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            showContext();  
+            setTimeout(showSecond,($("#wannasay").children(".context").length+3)*3000);  
+        });
+    </script>
+
+</body>

@@ -1,0 +1,151 @@
+@font-face{
+    font-family: mainfont;
+    src: url("../static/HYPPTiJ.ttf")
+}
+
+#bg {
+    position: relative;
+    z-index: -999;
+}
+
+#scu {
+    left: 35%;
+    top: 25%;
+    width: 30%;
+    height: 10%;
+    font-family: mainfont;
+    position: absolute;
+    font-size: 50px;
+    color: #f1ef5a
+}
+
+#mycanvas {
+    opacity: 0.3;
+    top: 7%;
+    left: 5%;
+    width: 90%;
+    height: 86%;
+    position: absolute;
+}
+
+label {
+    font-family: mainfont;
+    font-size: 30px;
+    color: #f1ef5a;
+    padding: 20px 25px 20px 25px;
+    margin: 20px 20px 20px 20px;  
+}
+
+span {
+    font-family: mainfont;
+    font-size: 30px;
+    color: #000000;
+
+}
+
+#logindiv {
+    left: 41%;
+    top: 40%;
+    position: absolute;
+
+}
+
+.textarea {
+    height: 20px;
+    width: 160px;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 5px 10px 5px 10px;
+    margin: 15px 25px;  
+}
+
+.but {
+    background-color:  #E27575;
+    border: none;
+    box-shadow: 1px 1px 5px #221f1f;
+    text-shadow: 1px 1px 1px #222222;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 10px ;  
+}
+
+.but:hover {
+    background-color: #CF7A7A;
+}
+
+#maindiv {
+    opacity: 0.9;
+    background-color: #ffffff;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    font-family: mainfont;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+#navdiv {
+    float: left;
+    width: 50%;
+    height: auto;
+}
+
+#mesg {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: #616161;
+}
+
+#mannav {
+    width: 80%;
+    height: 80%;
+}
+
+.navigate {
+    margin: 20px 40px 20px 0px;
+    padding: 5px;
+    text-align: center;
+    border: 3px;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.navigate a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    border: 5px;
+    background-color: #607D8B;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navigate a:hover {
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: rgb(117, 58, 23);
+}
+
+#tmp {
+    display: none;
+}
+
+.showed {
+    top: 20%;
+    left: 10%;
+    margin: 30px;
+    font-family: mainfont;
+    display: block;
+    font-size: 35px;
+    color: #DDD23B
+}
+
+#mesg button {
+    margin: 20px 170px;
+}

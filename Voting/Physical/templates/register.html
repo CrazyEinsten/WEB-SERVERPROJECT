@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html" charset="UTF-8">
+        <title>
+            四川大学体测系统
+        </title>
+        <script src="{% static "common/jquery-3.2.1.min.js" %}"></script>
+	<script src="{% static "js/solution.js" %}"></script>
+        <script src="{% static "common/modernizr.custom.33020.js" %}"></script>
+        <script src="{% static "js/function_2.js" %}"></script>
+        <link rel="stylesheet" href="{% static "css/default_2.css" %}">
+        <style>
+            .but {
+                margin:  0px 65px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="mycanvas"></canvas>
+        <img src="{% static "static/scu.jpg" %}" alt="背景" id="bg">
+        <div id="scu">四川大学体测信息入口</div>
+        <div id="logindiv">
+            <form action="/registo9/" method="post" id="login">
+               <label for="usrname">用户名:</label>
+               <input type="text" id="usrname" class="textarea">
+               <label for="passwd">密码:</label>
+               <input type="password" id="passwd" class="textarea">
+               <button type="button"  class="but" onclick="isokRegist()"><span>注册</span></button>
+            </form>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#bg").width($(window).width());
+                $("#bg").height($(window).height());
+                mainbg();
+            });
+            function isokRegist(){
+    	//var tmp = String({{isokey|safe}});
+	usrname = $("#usrname").val();
+	passwd = $("#passwd").val();
+    	$.post("regist/", {'usrname':usrname,'passwd':passwd}, function(ret){
+        	if (ret == 'True'){
+            	alert('注册成功！');
+        	}
+        	else{
+            	alert('用户名已被注册！');
+        	}
+    })
+}
+        </script>
+    </body>
+</html>

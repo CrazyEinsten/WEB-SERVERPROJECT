@@ -1,0 +1,61 @@
+body {
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+#first {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  left: 20%;
+  top: 33%;
+  color: rgb(252, 205, 104);
+  font-size: 40px;
+  font-family: ShiGuang;
+}
+
+
+.context{
+  font-size: 23px;
+  color: rgb(252, 205, 104);
+  display: none;
+}
+
+#wannasay{
+  position: absolute;
+  font-family: ShiGuang;
+  left: 60%;
+  top: 13%;
+  width: 33%;
+  height: 90%;
+}
+
+#ps{
+  font-style: italic;
+  font-size: 20px;
+  color: #43af67
+}
+
+#second{
+  top: 45%;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  left: 20%;
+  color: rgb(252, 205, 104);
+  font-size: 40px;
+  font-family: ShiGuang;
+  display: none;
+}
+
+#last {
+  top: 30%;
+  left: 60%;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  color: #ee7a44;
+  font-size: 60px;
+  font-family: XiaoMai;
+  display: none;
+}

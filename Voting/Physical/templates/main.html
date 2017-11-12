@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html" charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            四川大学体测系统
+        </title>
+        <script src="{% static "common/jquery-3.2.1.min.js" %}"></script>
+	<script src="{% static "js/solution.js" %}"></script>
+        <script src="{% static "common/modernizr.custom.33020.js" %}"></script>
+        <script src="{% static "js/function_2.js" %}"></script>
+        <link rel="stylesheet" href="{% static "css/default_2.css" %}">
+    </head>
+    <body>
+        <img src="{% static "static/towers.jpg" %}" alt="这有一张图" id="bg">
+        <canvas id="mycanvas"></canvas>
+        <div id="maindiv">
+            <div id="navdiv">
+                <ul id="mainnav">
+                    <li class="navigate"><a id="marksearch" onclick="marksearch()">体测成绩查询</a></li>
+                    <li class="navigate"><a id="pre" onclick="pre()">体测预约</a></li>
+                    <li class="navigate"><a id="presearch" onclick="presearch()">预约查询</a></li>
+                </ul>
+            </div>
+            <div id="mesg">
+                <span id="key"></span>
+                <div id="tmp">
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#bg").width($(window).width());
+                $("#bg").height($(window).height());
+                mainbg();
+                showusr();
+            });
+            function showusr(){
+    	var tmp = String({{usrname|safe}});
+    	$("#key").text(tmp);
+    	$("#key").css("display","none");
+	}
+        </script>
+          
+    </body>
+</html>
